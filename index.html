@@ -1,0 +1,728 @@
+<!-- VELORA — Desktop Home Financial Command Center -->
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Syne:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#1d4ed8", "on-primary-fixed": "#001551", "surface-container-highest": "#dce1ff", "primary-fixed": "#dce1ff", "error-container": "#ffdad6", "on-primary-container": "#cad3ff", "on-tertiary-fixed-variant": "#005137", "surface-container-lowest": "#ffffff", "surface": "#faf8ff", "secondary-fixed": "#ffdcc3", "surface-container": "#ebedff", "surface-bright": "#faf8ff", "surface-container-high": "#e3e7ff", "on-primary-fixed-variant": "#0039b5", "on-error-container": "#93000a", "on-surface": "#141a32", "inverse-primary": "#b7c4ff", "on-secondary-fixed-variant": "#6e3900", "on-secondary-container": "#663500", "secondary-container": "#fe932c", "tertiary-fixed": "#85f8c4", "primary": "#0037b0", "inverse-on-surface": "#eff0ff", "inverse-surface": "#292f48", "on-secondary-fixed": "#2f1500", "tertiary-fixed-dim": "#68dba9", "primary-fixed-dim": "#b7c4ff", "error": "#ba1a1a", "secondary-fixed-dim": "#ffb77d", "tertiary": "#004f35", "tertiary-container": "#006948", "on-secondary": "#ffffff", "on-tertiary-container": "#76eab6", "background": "#faf8ff", "surface-dim": "#d3d9f8", "on-surface-variant": "#434655", "surface-container-low": "#f3f2ff", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "outline-variant": "#c4c5d7", "surface-variant": "#dce1ff", "on-background": "#141a32", "secondary": "#904d00", "on-tertiary-fixed": "#002114", "surface-tint": "#2151da", "outline": "#747686" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-desktop": "2rem", "space-md": "1rem", "margin-desktop": "3rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "display-lg-mobile": ["Syne"], "display-lg": ["Syne"], "display-md-mobile": ["Syne"], "headline-md": ["Syne"], "title-lg": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Syne"], "headline-lg-mobile": ["Syne"], "headline-sm": ["Syne"], "label-lg": ["Inter"], "label-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "display-md": ["Syne"] }, "fontSize": { "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "display-md-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Velora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-35H9U7up825ALQZRf9p5FxcjMm3e_iNsn-u-o38xFXHV_BgUwlQys40q_LpjDQOkvmm-0HA_GhQgGUB3OFq7cHmnOXGS7Fa1-Fl2FPu9D6uMCkqvMn8qVfmZOgLHyYoFUTjLdV4mk4Qf2ZJVFMMVCXMOd5smW0J5eK9UxKg6HxYgkbEKAdMg8gEM6XHQaDeG2XE6v7uhwwxXN9XNbvlgOBFvVfsQYsreEhqGAk8ngQ3HLfYDeMN5M1sY"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight uppercase">VELORA</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Private Wealth</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="payments" href="#">Payments</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="savings" href="invest.html">Savings</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="investments" href="#">Investments</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="flights" href="bookin.html">Flights</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="transactions" href="#">Transactions</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface-variant">Sovereign Desks Open</span></div><button aria-label="Notifications" class="p-space-sm rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><p class="font-title-md text-title-md text-on-surface leading-tight">Amina Bello</p><p class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Platinum Member</p></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WyGObWPN2EjaQYOsgpkVZ7dLynm7384bnIL_u04XZynYC3uQGF1-rr12CAj-zDNAfaUePImS6Rz-On61g46ViXWl1hO16KRjZulDTfgSJifwflDqMQXbI9n6eWy5f_IsLcg_XU_WXBB53e5IHNpkhj3LSunWBLsMQHvqBr9MQKbveO061QUkjUSOcBAJW2vbBLSbgbkP_pJxoFjTWFvvMsDQTfWfdFRLeaLRn_ljzWXcc1CM-TA7-GlkA"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Live Sovereign Treasury & Rates Bar -->
+<div class="w-full bg-surface-container-low shadow-sm">
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Lagos Interbank FX Desk Active</span>
+</div>
+<span class="text-outline-variant font-label-md">|</span>
+<div class="flex items-center gap-space-lg text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">USD/NGN</span>
+<span>₦1,532.40</span>
+<span class="text-tertiary font-medium">▲ +0.12%</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">EUR/NGN</span>
+<span>₦1,610.80</span>
+<span class="text-tertiary font-medium">▲ +0.08%</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">GBP/NGN</span>
+<span>₦1,948.50</span>
+<span class="text-secondary font-medium">▼ -0.04%</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="hidden md:inline font-label-md text-label-md text-on-surface-variant">CBN Direct Settlement Protocol • 256-bit AES</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-semibold">Tier 3 Sovereign Elite</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-margin-desktop w-full py-space-lg space-y-space-xl">
+<!-- Executive Welcome & Greeting Row -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Executive Terminal</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Thursday, 24 September 2026 • Lagos Treasury Desk</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Good morning, Amina</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Institutional portfolio overview and liquid settlement matrix are synchronized.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest shadow-sm hover:bg-surface-container font-label-lg text-label-lg text-on-surface transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Download Audit Ledger</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Initiate Rapid Wire</span>
+</button>
+</div>
+</div>
+<!-- Top Section: Executive Financial Command Bar & Wallet Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Bright Liquid Wallet Card (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-primary/5 pointer-events-none blur-2xl"></div>
+<div class="space-y-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Primary Liquid Reserve</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase font-bold">NIBSS Instant</span>
+</div>
+<button class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" id="toggleBalanceBtn">
+<span class="material-symbols-outlined text-[18px]" id="eyeIcon">visibility</span>
+<span id="eyeLabel">Hide Balance</span>
+</button>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-extrabold tracking-tight" id="balanceValue">₦486,750.00</span>
+<span class="font-label-lg text-label-lg text-tertiary font-bold flex items-center">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> +3.8%
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">VELORA Sovereign Multi-Currency Vault • Account ID: <span class="font-medium text-on-surface font-mono">0129 •••• 8841</span></p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface-variant">NDIC Insured to Statutory Cap (₦5,000,000)</span>
+</div>
+<span class="text-outline-variant font-label-md">|</span>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Daily Transfer Cap: ₦10,000,000</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Execution Matrix -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-lg relative z-10">
+<button class="flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-center group">
+<div class="w-10 h-10 rounded-full bg-primary/10 group-hover:bg-primary text-primary group-hover:text-on-primary flex items-center justify-center transition-colors mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">send_money</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Send Money</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant NIBSS</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-center group">
+<div class="w-10 h-10 rounded-full bg-secondary/10 group-hover:bg-secondary text-secondary group-hover:text-on-secondary flex items-center justify-center transition-colors mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">add_card</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Add Money</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Virtual / USSD</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-center group">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 group-hover:bg-primary-container text-primary-container group-hover:text-on-primary flex items-center justify-center transition-colors mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">wifi_tethering</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Airtime &amp; Data</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3% Cashback</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all text-center group">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 group-hover:bg-tertiary-container text-tertiary-container group-hover:text-on-tertiary flex items-center justify-center transition-colors mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Pay Utilities</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">EKEDC, DStv</span>
+</button>
+</div>
+</div>
+<!-- Financial Health & Asset Position (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Consolidated Wealth Matrix</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary/10 font-label-md text-label-md text-tertiary font-bold">+9.6% YTD</span>
+</div>
+<div class="flex items-baseline justify-between mb-space-md">
+<div>
+<p class="font-display-md text-display-md text-on-surface font-extrabold tracking-tight">₦4,071,750.00</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Total Financial Position across all silos</p>
+</div>
+</div>
+<!-- Mini Growth Chart (SVG Sparkline) -->
+<div class="w-full h-16 relative mb-space-md">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 320 60">
+<defs>
+<lineargradient id="chartGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,52 Q40,48 80,38 T160,34 T240,18 T320,8 L320,60 L0,60 Z" fill="url(#chartGrad)"></path>
+<path d="M0,52 Q40,48 80,38 T160,34 T240,18 T320,8" fill="none" stroke="#1d4ed8" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="320" cy="8" fill="#1d4ed8" r="4"></circle>
+</svg>
+</div>
+<!-- Allocation Breakdown Bars -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                Investments (69.9%)
+              </span>
+<span class="font-semibold">₦2,850,000.00</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+                Digital Ajo Savings (18.1%)
+              </span>
+<span class="font-semibold">₦735,000.00</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+                Liquid Reserves (12.0%)
+              </span>
+<span class="font-semibold">₦486,750.00</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 flex overflow-hidden mt-space-md">
+<div class="bg-primary h-full" style="width: 70%"></div>
+<div class="bg-tertiary-container h-full" style="width: 18%"></div>
+<div class="bg-secondary-container h-full" style="width: 12%"></div>
+</div>
+</div>
+</div>
+<!-- Strategic Investor Module: "YOUR VELORA — THE FOUR ECOSYSTEM PILLARS" -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Ecosystem Infrastructure</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Your VELORA — The Four Sovereign Pillars</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Real-time engagement desks active</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Pillar 1: PAY -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl group">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">01 • PAY</span>
+<span class="material-symbols-outlined text-primary text-[22px]">payments</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Everything paid in seconds.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Frictionless utility rails &amp; instant automated billing settlement.</p>
+</div>
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md py-1 px-2 rounded bg-surface-container-low">
+<span class="text-on-surface">Airtime &amp; Bundle</span>
+<span class="text-tertiary font-bold">3% Instant Rebate</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md py-1 px-2 rounded bg-surface-container-low">
+<span class="text-on-surface">Prepaid DISCOs</span>
+<span class="text-on-surface-variant">Zero fee generation</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md py-1 px-2 rounded bg-surface-container-low">
+<span class="text-on-surface">Cable &amp; Streaming</span>
+<span class="text-on-surface-variant">Instant renewal</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Settled This Month</p>
+<p class="font-title-lg text-title-lg text-on-surface font-bold">₦64,500.00</p>
+</div>
+</div>
+<button class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs">
+<span>Make a Payment</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Pillar 2: SAVE -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl group">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm uppercase font-bold tracking-wider">02 • SAVE</span>
+<span class="material-symbols-outlined text-tertiary text-[22px]">savings</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Turn consistency into progress.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Modernized Pan-African digital Ajo daily ledger and escrow passbook.</p>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-space-xs">
+<span>18-Day Streak</span>
+<span>🔥</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">60% Complete</span>
+</div>
+<!-- Mini 10-stamp passbook grid -->
+<div class="space-y-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Recent Cycle Verification</span>
+<span class="font-medium text-tertiary">₦90k / ₦150k</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-tertiary flex items-center justify-center text-on-tertiary font-label-sm">✓</div>
+<div class="h-6 rounded bg-secondary-container flex items-center justify-center text-on-secondary-container font-label-sm font-bold">18</div>
+<div class="h-6 rounded bg-surface-container flex items-center justify-center text-on-surface-variant font-label-sm">19</div>
+</div>
+</div>
+</div>
+<button class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs">
+<span>View Savings Passbook</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Pillar 3: INVEST -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl group">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm uppercase font-bold tracking-wider">03 • INVEST</span>
+<span class="material-symbols-outlined text-primary-container text-[22px]">trending_up</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Put your money to work.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Institutional wealth products curated with SEC-licensed managers.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Active Capital</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">+10.23% p.a.</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold">₦2,850,000.00</p>
+</div>
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Money Market Fund</span>
+<span class="font-medium text-on-surface">₦1,500,000</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Fixed Income Note</span>
+<span class="font-medium text-on-surface">₦850,000</span>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>USD Eurobond Desk</span>
+<span class="font-medium text-on-surface">$500.00</span>
+</div>
+</div>
+</div>
+<button class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs">
+<span>View Portfolio &amp; Market</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Pillar 4: TRAVEL -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between transition-all hover:shadow-xl group">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm uppercase font-bold tracking-wider">04 • TRAVEL</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">flight_takeoff</span>
+</div>
+<div class="space-y-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Your next journey starts here.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Integrated domestic &amp; global flight ticketing with direct wallet escrow.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Route Priority</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today's Low</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Lagos (LOS) → Abuja (ABV)</p>
+<p class="font-label-lg text-label-lg text-primary font-bold">From ₦142,500.00</p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md pt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">airplane_ticket</span>
+<span>Direct settlement + Sky Club VIP Concierge</span>
+</div>
+</div>
+<button class="mt-space-lg w-full py-space-sm rounded-lg bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs">
+<span>Search Flights</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Two-Column Lower Workspace (60% / 40%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Unified Sovereign Recent Activity & Ledger (60% / 7 cols on lg, 7 cols on xl) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sovereign Transaction Ledger</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Itemized real-time cleared settlements</p>
+</div>
+<!-- Ledger Filter Tabs -->
+<div class="flex items-center gap-1 p-1 rounded-lg bg-surface-container overflow-x-auto">
+<button class="px-space-sm py-1 rounded-md bg-surface-container-lowest shadow-sm font-label-sm text-label-sm font-semibold text-on-surface">All</button>
+<button class="px-space-sm py-1 rounded-md hover:bg-surface-container-high font-label-sm text-label-sm font-semibold text-on-surface-variant">Payments</button>
+<button class="px-space-sm py-1 rounded-md hover:bg-surface-container-high font-label-sm text-label-sm font-semibold text-on-surface-variant">Savings</button>
+<button class="px-space-sm py-1 rounded-md hover:bg-surface-container-high font-label-sm text-label-sm font-semibold text-on-surface-variant">Invest</button>
+<button class="px-space-sm py-1 rounded-md hover:bg-surface-container-high font-label-sm text-label-sm font-semibold text-on-surface-variant">Flights</button>
+</div>
+</div>
+<!-- Transaction List -->
+<div class="space-y-space-sm">
+<!-- Row 1: Daily Savings -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">savings</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<p class="font-title-md text-title-md text-on-surface font-semibold">Daily Savings Contribution</p>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm">Cycle #09</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Today, 06:00 AM • Automated Escrow Lock</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-error font-bold">-₦5,000.00</p>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Cleared</span>
+</div>
+</div>
+<!-- Row 2: Airtime -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<p class="font-title-md text-title-md text-on-surface font-semibold">Airtime Purchase</p>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm">Rebate ₦60</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Yesterday, 08:42 PM • MTN Prestige Desk</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-error font-bold">-₦2,000.00</p>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Settled</span>
+</div>
+</div>
+<!-- Row 3: Investment Yield -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">currency_exchange</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<p class="font-title-md text-title-md text-on-surface font-semibold">Sovereign Eurobond Coupon</p>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Yield</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">24 Nov • Investment Yield Cleared</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-tertiary font-bold">+₦31,400.00</p>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Credited</span>
+</div>
+</div>
+<!-- Row 4: Flight Booking -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">flight</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<p class="font-title-md text-title-md text-on-surface font-semibold">Flight Booking (LOS → ABV)</p>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">AV-409</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">22 Nov • AeroVista AV-409 Confirmed</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-error font-bold">-₦142,500.00</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">Confirmed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="w-full py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" href="#">
+<span>Open Full Audit Ledger (248 records)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Sovereign Intelligence & Auto-Debits (40% / 5 cols) -->
+<div class="lg:col-span-5 space-y-space-lg">
+<!-- Sovereign Intelligence Insight Banner -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg relative overflow-hidden">
+<div class="space-y-space-md relative z-10">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">VELORA Sovereign Intelligence</span>
+</div>
+<div class="space-y-space-xs">
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold">💡 Wealth Momentum Insight</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Your savings and investments grew by <span class="font-semibold text-tertiary">₦176,400.00</span> over the last 90 days. You are currently pacing <span class="font-semibold text-primary">12 days ahead</span> of your December milestone target.
+              </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-xs pt-space-xs">
+<button class="flex-1 py-space-sm px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors">
+                Lock Recommended Yield Boost
+              </button>
+<button class="py-space-sm px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors">
+                Milestone Analytics
+              </button>
+</div>
+</div>
+</div>
+<!-- Upcoming Escrows & Scheduled Debits -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Upcoming Scheduled Escrows</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Autopilot</span>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">event_repeat</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Daily Savings Auto-Debit</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Scheduled tomorrow • 06:00 AM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-on-surface font-bold">₦5,000.00</p>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+</div>
+<div class="flex items-start justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">bolt</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Eko Electricity Prepaid Token</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Auto-recharge due in 4 days</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-on-surface font-bold">₦25,000.00</p>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Queued</span>
+</div>
+</div>
+<div class="flex items-start justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">luggage</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Corporate Sky Lounge Pass</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Complimentary access at MMA2 &amp; ABV</p>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase">VIP Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      const toggleBtn = document.getElementById('toggleBalanceBtn');
+      const balanceEl = document.getElementById('balanceValue');
+      const eyeIcon = document.getElementById('eyeIcon');
+      const eyeLabel = document.getElementById('eyeLabel');
+      let isHidden = false;
+      const originalBalance = "₦486,750.00";
+
+      if (toggleBtn && balanceEl) {
+        toggleBtn.addEventListener('click', function() {
+          isHidden = !isHidden;
+          if (isHidden) {
+            balanceEl.textContent = "₦ ••••••••";
+            eyeIcon.textContent = "visibility_off";
+            eyeLabel.textContent = "Show Balance";
+          } else {
+            balanceEl.textContent = originalBalance;
+            eyeIcon.textContent = "visibility";
+            eyeLabel.textContent = "Hide Balance";
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div class="max-w-[1440px] mx-auto px-margin-desktop py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Velora Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-35H9U7up825ALQZRf9p5FxcjMm3e_iNsn-u-o38xFXHV_BgUwlQys40q_LpjDQOkvmm-0HA_GhQgGUB3OFq7cHmnOXGS7Fa1-Fl2FPu9D6uMCkqvMn8qVfmZOgLHyYoFUTjLdV4mk4Qf2ZJVFMMVCXMOd5smW0J5eK9UxKg6HxYgkbEKAdMg8gEM6XHQaDeG2XE6v7uhwwxXN9XNbvlgOBFvVfsQYsreEhqGAk8ngQ3HLfYDeMN5M1sY"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">VELORA</span><span class="font-body-md text-body-md text-on-surface-variant ml-space-xs">— Money for every move.</span></div><div class="flex items-center gap-space-lg font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Institutional Disclosures</span><span class="hover:text-on-surface cursor-pointer">Treasury FX Status</span><span class="hover:text-on-surface cursor-pointer">Privacy Charter</span><span class="text-on-surface-variant">© 2025 VELORA Inc.</span></div></div></footer></body></html>
+
+<!-- VELORA — Home Dashboard (Four Pillars) -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Syne:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#1d4ed8", "on-primary-fixed": "#001551", "surface-container-highest": "#dce1ff", "primary-fixed": "#dce1ff", "error-container": "#ffdad6", "on-primary-container": "#cad3ff", "on-tertiary-fixed-variant": "#005137", "surface-container-lowest": "#ffffff", "surface": "#faf8ff", "secondary-fixed": "#ffdcc3", "surface-container": "#ebedff", "surface-bright": "#faf8ff", "surface-container-high": "#e3e7ff", "on-primary-fixed-variant": "#0039b5", "on-error-container": "#93000a", "on-surface": "#141a32", "inverse-primary": "#b7c4ff", "on-secondary-fixed-variant": "#6e3900", "on-secondary-container": "#663500", "secondary-container": "#fe932c", "tertiary-fixed": "#85f8c4", "primary": "#0037b0", "inverse-on-surface": "#eff0ff", "inverse-surface": "#292f48", "on-secondary-fixed": "#2f1500", "tertiary-fixed-dim": "#68dba9", "primary-fixed-dim": "#b7c4ff", "error": "#ba1a1a", "secondary-fixed-dim": "#ffb77d", "tertiary": "#004f35", "tertiary-container": "#006948", "on-secondary": "#ffffff", "on-tertiary-container": "#76eab6", "background": "#faf8ff", "surface-dim": "#d3d9f8", "on-surface-variant": "#434655", "surface-container-low": "#f3f2ff", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "outline-variant": "#c4c5d7", "surface-variant": "#dce1ff", "on-background": "#141a32", "secondary": "#904d00", "on-tertiary-fixed": "#002114", "surface-tint": "#2151da", "outline": "#747686" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-desktop": "2rem", "space-md": "1rem", "margin-desktop": "3rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "display-lg-mobile": ["Syne"], "display-lg": ["Syne"], "display-md-mobile": ["Syne"], "headline-md": ["Syne"], "title-lg": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Syne"], "headline-lg-mobile": ["Syne"], "headline-sm": ["Syne"], "label-lg": ["Inter"], "label-sm": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "display-md": ["Syne"] }, "fontSize": { "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "display-md-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Velora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-35H9U7up825ALQZRf9p5FxcjMm3e_iNsn-u-o38xFXHV_BgUwlQys40q_LpjDQOkvmm-0HA_GhQgGUB3OFq7cHmnOXGS7Fa1-Fl2FPu9D6uMCkqvMn8qVfmZOgLHyYoFUTjLdV4mk4Qf2ZJVFMMVCXMOd5smW0J5eK9UxKg6HxYgkbEKAdMg8gEM6XHQaDeG2XE6v7uhwwxXN9XNbvlgOBFvVfsQYsreEhqGAk8ngQ3HLfYDeMN5M1sY"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight uppercase">VELORA</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Private Wealth</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-semibold rounded-lg" data-path="home" href="#">Home</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="payments" href="#">Payments</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="savings" href="invest.html">Savings</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="investments" href="#">Investments</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="flights" href="bookin.html">Flights</a><a class="px-space-md py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="transactions" href="#">Transactions</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface-variant">Sovereign Desks Open</span></div><button aria-label="Notifications" class="p-space-sm rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><p class="font-title-md text-title-md text-on-surface leading-tight">Amina Bello</p><p class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Platinum Member</p></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WyGObWPN2EjaQYOsgpkVZ7dLynm7384bnIL_u04XZynYC3uQGF1-rr12CAj-zDNAfaUePImS6Rz-On61g46ViXWl1hO16KRjZulDTfgSJifwflDqMQXbI9n6eWy5f_IsLcg_XU_WXBB53e5IHNpkhj3LSunWBLsMQHvqBr9MQKbveO061QUkjUSOcBAJW2vbBLSbgbkP_pJxoFjTWFvvMsDQTfWfdFRLeaLRn_ljzWXcc1CM-TA7-GlkA"></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-24 space-y-space-lg px-margin-mobile">
+<!-- USER GREETING & STATUS BAR -->
+<section class="flex items-center justify-between pt-space-sm"><div class="flex items-center gap-3"><div class="relative"><img alt="Amina Bello" class="w-12 h-12 rounded-full object-cover shadow-sm ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida/AEtjO1WyGObWPN2EjaQYOsgpkVZ7dLynm7384bnIL_u04XZynYC3uQGF1-rr12CAj-zDNAfaUePImS6Rz-On61g46ViXWl1hO16KRjZulDTfgSJifwflDqMQXbI9n6eWy5f_IsLcg_XU_WXBB53e5IHNpkhj3LSunWBLsMQHvqBr9MQKbveO061QUkjUSOcBAJW2vbBLSbgbkP_pJxoFjTWFvvMsDQTfWfdFRLeaLRn_ljzWXcc1CM-TA7-GlkA"><span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-tertiary-container flex items-center justify-center ring-2 ring-surface-container-lowest"><span class="material-symbols-outlined text-[10px] text-on-tertiary font-bold">check</span></span></div><div class="flex flex-col"><div class="flex items-center gap-2"><h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Good morning, Amina</h2><span class="px-2 py-0.5 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed font-label-sm text-label-sm font-semibold border border-secondary-fixed">Tier 3</span></div><p class="font-body-md text-[13px] text-on-surface-variant">Private Client • Sovereign Portfolio</p></div></div><div class="flex items-center gap-2"><button aria-label="Notifications" class="w-10 h-10 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors relative group" type="button"><span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-110">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface-container-lowest"></span></button></div></section>
+<!-- HERO WALLET CARD (Bright, Crisp, Luxury) -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-[0_4px_24px_rgba(29,78,216,0.06)] border"><div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none"></div><div class="absolute -left-12 -bottom-12 w-44 h-44 rounded-full bg-secondary-fixed/30 blur-2xl pointer-events-none"></div><div class="relative z-10 flex flex-col space-y-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant font-semibold">Available Balance</span><button class="text-on-surface-variant hover:text-primary transition-colors flex items-center p-1 rounded-full hover:bg-surface-container-high" id="toggleBalanceBtn" aria-label="Toggle Balance Visibility"><span class="material-symbols-outlined text-[18px]" id="balanceEyeIcon">visibility</span></button></div><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed font-label-sm text-label-sm font-semibold border border-primary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Primary Ledger • NIBSS Live</span></div><div class="flex flex-col"><div class="flex items-baseline gap-1"><h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-tight font-bold font-display-lg" id="heroBalanceText">₦486,750.00</h1></div><div class="flex flex-wrap items-center gap-2 mt-1.5"><span class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md bg-surface-container-low px-2 py-0.5 rounded-md border border-outline-variant/30"><span class="material-symbols-outlined text-[14px] text-tertiary-container">verified_user</span>NDIC Insured Up to ₦5,000,000</span><span class="text-outline-variant text-[10px]">•</span><span class="text-on-surface-variant font-label-md text-label-md">Daily Limit: ₦10,000,000</span></div></div><div class="pt-space-xs grid grid-cols-5 gap-2.5 text-center"><button class="flex flex-col items-center gap-1.5 group"><div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-primary-container transition-all"><span class="material-symbols-outlined text-[22px]">send</span></div><span class="font-label-md text-label-md text-on-surface font-semibold">Send</span><span class="font-label-sm text-[11px] text-secondary -mt-1 font-medium">Zero Fee</span></button><button class="flex flex-col items-center gap-1.5 group"><div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shadow-xs border border-outline-variant/30 group-hover:scale-105 group-hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined text-[22px]">add_circle</span></div><span class="font-label-md text-label-md text-on-surface font-semibold">Add</span><span class="font-label-sm text-[11px] text-on-surface-variant -mt-1 font-medium">Wema/Card</span></button><button class="flex flex-col items-center gap-1.5 group"><div class="w-12 h-12 rounded-xl bg-surface-container text-secondary flex items-center justify-center shadow-xs border border-outline-variant/30 group-hover:scale-105 group-hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined text-[22px]">phone_iphone</span></div><span class="font-label-md text-label-md text-on-surface font-semibold">Airtime</span><span class="font-label-sm text-[11px] text-tertiary -mt-1 font-semibold">3% Bonus</span></button><button class="flex flex-col items-center gap-1.5 group"><div class="w-12 h-12 rounded-xl bg-surface-container text-primary flex items-center justify-center shadow-xs border border-outline-variant/30 group-hover:scale-105 group-hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined text-[22px]">wifi</span></div><span class="font-label-md text-label-md text-on-surface font-semibold">Data</span><span class="font-label-sm text-[11px] text-on-surface-variant -mt-1 font-medium">Instant</span></button><button class="flex flex-col items-center gap-1.5 group"><div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shadow-xs border border-outline-variant/30 group-hover:scale-105 group-hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined text-[22px]">receipt_long</span></div><span class="font-label-md text-label-md text-on-surface font-semibold">Pay Bills</span><span class="font-label-sm text-[11px] text-on-surface-variant -mt-1 font-medium">Power/TV</span></button></div></div></section>
+<!-- INTELLIGENCE CHIP -->
+<section class="rounded-xl bg-surface-container p-space-md flex items-start gap-space-sm shadow-sm border"><div class="w-8 h-8 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shrink-0 shadow-xs border border-outline-variant/30"><span class="material-symbols-outlined text-[18px]">lightbulb</span></div><div class="flex flex-col gap-0.5"><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Sovereign Intelligence</span><span class="text-[10px] text-tertiary font-semibold bg-tertiary-fixed px-2 py-0.5 rounded-full border border-tertiary-fixed-dim">+₦176,400</span></div><p class="font-body-md text-body-md text-on-surface leading-snug pt-0.5">Your combined savings and investments grew by <strong class="font-semibold text-on-surface">₦176,400</strong> in the last 90 days. You are pacing 12 days ahead of your December target.</p><a class="font-label-lg text-label-lg text-primary hover:underline mt-1.5 inline-flex items-center gap-1 font-semibold" href="#">Explore Growth Breakdown<span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></section>
+<!-- THE FOUR PILLARS: "YOUR VELORA" -->
+<section class="flex flex-col space-y-space-md">
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Core Architecture</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Interconnected Hubs</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">YOUR VELORA</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Four interconnected pillars powering your financial life.</p>
+</div>
+<!-- 1. PAY CARD -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold tracking-wide">PAY</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span> Instant Settlement
+        </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Everything paid in seconds.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Airtime • Data • Electricity • Cable TV</p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span> EKEDC Fast
+        </span>
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">tv</span> DStv Premium
+        </span>
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">cell_tower</span> 5G Fibre
+        </span>
+</div>
+<div class="pt-2">
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
+<span class="">Make a Payment</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 2. SAVE CARD -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold tracking-wide">SAVE</span>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="">18 Day Streak</span>
+<span class="">🔥</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Turn consistency into progress.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Daily Savings • Cycle #09 Milestone</p>
+</div>
+<!-- Progress Bar & Amount -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Saved This Month</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">₦90,000.00</span>
+</div>
+<!-- 5 Stamp Badges -->
+<div class="grid grid-cols-5 gap-1.5 pt-1">
+<div class="h-6 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold">✓ 21</div>
+<div class="h-6 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold">✓ 22</div>
+<div class="h-6 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold">✓ 23</div>
+<div class="h-6 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold">✓ 24</div>
+<div class="h-6 rounded-md bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold ring-2 ring-primary-fixed">TODAY</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all">
+<span class="">View Savings Passbook</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 3. INVEST CARD -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm font-bold tracking-wide">INVEST</span>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+          +10.23% p.a.
+        </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Put your money to work.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Portfolio Valuation: <strong class="text-on-surface font-semibold">₦2,850,000.00</strong></p>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-surface-container-low px-space-sm py-2">
+<span class="material-symbols-outlined text-[18px] text-primary">account_balance</span>
+<span class="font-label-md text-label-md text-on-surface-variant">SEC Licensed Money Market &amp; Sovereign Eurobonds</span>
+</div>
+<div class="pt-2">
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all">
+<span class="">View Investment Portfolio</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 4. TRAVEL CARD -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold tracking-wide">TRAVEL</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">VIP Lounge Included</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Your next journey starts here.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct wallet settlement with instant biometric ticket issuance.</p>
+</div>
+<!-- Route Box -->
+<div class="rounded-lg bg-surface-container-low p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface font-bold">Lagos (LOS) → Abuja (ABV)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Daily Executive Shuttles</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">From</span>
+<span class="font-title-md text-title-md text-primary font-bold">₦142,500</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full h-11 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all">
+<span class="">Search Flights &amp; Lounges</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CONSOLIDATED FINANCIAL POSITION SECTION -->
+<section class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col space-y-space-md border"><div class="flex items-center justify-between"><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Net Wealth Position</span><h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Consolidated Portfolio</h3></div><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold border border-tertiary-fixed-dim shadow-xs"><span class="material-symbols-outlined text-[14px]">trending_up</span>+9.6% YTD</div></div><div class="flex items-baseline gap-2"><span class="font-display-md-mobile text-display-md-mobile text-on-surface font-bold tracking-tight font-display-md">₦4,071,750.00</span></div><div class="w-full h-16 pt-1"><svg class="w-full h-full overflow-visible" fill="none" preserveAspectRatio="none" viewBox="0 0 320 64"><defs><linearGradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.0"></stop></linearGradient></defs><path d="M0,52 C30,50 60,42 90,44 C120,46 150,32 180,30 C210,28 240,16 270,14 C290,12 305,6 320,4 L320,64 L0,64 Z" fill="url(#chartGradient)"></path><path d="M0,52 C30,50 60,42 90,44 C120,46 150,32 180,30 C210,28 240,16 270,14 C290,12 305,6 320,4" stroke="#1d4ed8" stroke-linecap="round" stroke-width="2.5"></path><circle cx="320" cy="4" fill="#1d4ed8" r="3.5"></circle></svg></div><div class="flex flex-col space-y-2.5 pt-1"><div class="w-full h-2.5 rounded-full overflow-hidden flex bg-surface-container p-0.5 gap-0.5"><div class="h-full bg-primary rounded-l-full" style="width: 11.9%"></div><div class="h-full bg-secondary-container" style="width: 18.1%"></div><div class="h-full bg-tertiary-container rounded-r-full" style="width: 70.0%"></div></div><div class="grid grid-cols-3 gap-2 pt-1.5"><div class="flex flex-col bg-surface-container-low/70 p-2 rounded-lg border border-outline-variant/20"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate font-medium">Wallet (11.9%)</span></div><span class="font-title-md text-title-md text-on-surface font-bold mt-1 tracking-tight">₦486,750</span></div><div class="flex flex-col bg-surface-container-low/70 p-2 rounded-lg border border-outline-variant/20"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate font-medium">Savings (18.1%)</span></div><span class="font-title-md text-title-md text-on-surface font-bold mt-1 tracking-tight">₦735,000</span></div><div class="flex flex-col bg-surface-container-low/70 p-2 rounded-lg border border-outline-variant/20"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary-container shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate font-medium">Invest (70%)</span></div><span class="font-title-md text-title-md text-on-surface font-bold mt-1 tracking-tight">₦2,850,000</span></div></div></div></section>
+<!-- RECENT ACTIVITY LEDGER -->
+<section class="flex flex-col space-y-space-sm"><div class="flex items-center justify-between"><h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recent Activity</h3><a class="font-label-lg text-label-lg text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">See All<span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div><div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm border border-outline-variant/30 flex flex-col space-y-1"><div class="p-space-sm rounded-lg hover:bg-surface-container transition-colors flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center border border-tertiary-fixed-dim"><span class="material-symbols-outlined text-[20px]">savings</span></div><div><div class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Daily Savings Passbook</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Today, 06:00 AM • Ajo Cycle #09</div></div></div><div class="text-right"><span class="font-title-md text-title-md text-on-surface font-bold block tracking-tight">-₦5,000.00</span><span class="font-label-sm text-label-sm text-tertiary font-semibold inline-flex items-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Success</span></div></div><div class="p-space-sm rounded-lg hover:bg-surface-container transition-colors flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center border border-secondary-fixed-dim"><span class="material-symbols-outlined text-[20px]">phone_iphone</span></div><div><div class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Airtime Topup</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Yesterday • MTN 0803***9021</div></div></div><div class="text-right"><span class="font-title-md text-title-md text-on-surface font-bold block tracking-tight">-₦2,000.00</span><span class="font-label-sm text-label-sm text-secondary font-semibold">+₦60 Bonus</span></div></div><div class="p-space-sm rounded-lg hover:bg-surface-container transition-colors flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center border border-primary-fixed-dim"><span class="material-symbols-outlined text-[20px]">trending_up</span></div><div><div class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Investment Return</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">24 Nov • Sovereign Eurobond Coupon</div></div></div><div class="text-right"><span class="font-title-md text-title-md text-tertiary font-bold block tracking-tight">+₦31,400.00</span><span class="font-label-sm text-label-sm text-tertiary font-semibold inline-flex items-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Credited</span></div></div><div class="p-space-sm rounded-lg hover:bg-surface-container transition-colors flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center border border-outline-variant/30"><span class="material-symbols-outlined text-[20px]">flight</span></div><div><div class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Flight Booking</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">22 Nov • AeroVista LOS → ABV</div></div></div><div class="text-right"><span class="font-title-md text-title-md text-on-surface font-bold block tracking-tight">-₦142,500.00</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ticket Issued</span></div></div></div></section>
+<!-- MOBILE BOTTOM STICKY NAVIGATION -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.04)] px-margin-mobile py-2 flex items-center justify-around"><a class="flex flex-col items-center gap-0.5 text-primary relative py-1" href="#"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span><span class="font-label-sm text-[11px] font-bold">Home</span><span class="w-1 h-1 rounded-full bg-primary mt-0.5"></span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface py-1" href="#"><span class="material-symbols-outlined text-[24px]">payments</span><span class="font-label-sm text-[11px] font-medium">Pay</span><span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface py-1" href="#"><span class="material-symbols-outlined text-[24px]">savings</span><span class="font-label-sm text-[11px] font-medium">Save</span><span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface py-1" href="#"><span class="material-symbols-outlined text-[24px]">monitoring</span><span class="font-label-sm text-[11px] font-medium">Invest</span><span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant hover:text-on-surface py-1" href="#"><span class="material-symbols-outlined text-[24px]">travel</span><span class="font-label-sm text-[11px] font-medium">Travel</span><span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span></a></nav>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleBalanceBtn');
+    const balanceText = document.getElementById('heroBalanceText');
+    const eyeIcon = document.getElementById('balanceEyeIcon');
+    let isHidden = false;
+    const originalBalance = "₦486,750.00";
+    const maskedBalance = "••••••••••";
+
+    if (toggleBtn && balanceText && eyeIcon) {
+      toggleBtn.addEventListener('click', function() {
+        isHidden = !isHidden;
+        if (isHidden) {
+          balanceText.textContent = maskedBalance;
+          eyeIcon.textContent = 'visibility_off';
+        } else {
+          balanceText.textContent = originalBalance;
+          eyeIcon.textContent = 'visibility';
+        }
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div class="max-w-[1440px] mx-auto px-margin-desktop py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Velora Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-35H9U7up825ALQZRf9p5FxcjMm3e_iNsn-u-o38xFXHV_BgUwlQys40q_LpjDQOkvmm-0HA_GhQgGUB3OFq7cHmnOXGS7Fa1-Fl2FPu9D6uMCkqvMn8qVfmZOgLHyYoFUTjLdV4mk4Qf2ZJVFMMVCXMOd5smW0J5eK9UxKg6HxYgkbEKAdMg8gEM6XHQaDeG2XE6v7uhwwxXN9XNbvlgOBFvVfsQYsreEhqGAk8ngQ3HLfYDeMN5M1sY"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">VELORA</span><span class="font-body-md text-body-md text-on-surface-variant ml-space-xs">— Money for every move.</span></div><div class="flex items-center gap-space-lg font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Institutional Disclosures</span><span class="hover:text-on-surface cursor-pointer">Treasury FX Status</span><span class="hover:text-on-surface cursor-pointer">Privacy Charter</span><span class="text-on-surface-variant">© 2025 VELORA Inc.</span></div></div></footer>
+
+</body></html>
